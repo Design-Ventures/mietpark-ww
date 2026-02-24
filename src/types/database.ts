@@ -15,23 +15,47 @@ export type Database = {
         Row: Product;
         Insert: Omit<Product, "id" | "created_at" | "updated_at">;
         Update: Partial<Omit<Product, "id" | "created_at">>;
+        Relationships: [];
       };
       customers: {
         Row: Customer;
         Insert: Omit<Customer, "id" | "created_at">;
         Update: Partial<Omit<Customer, "id" | "created_at">>;
+        Relationships: [];
       };
       bookings: {
         Row: Booking;
         Insert: Omit<Booking, "id" | "created_at" | "updated_at">;
         Update: Partial<Omit<Booking, "id" | "created_at">>;
+        Relationships: [];
       };
       checkout_protocols: {
         Row: CheckoutProtocol;
         Insert: Omit<CheckoutProtocol, "id" | "created_at">;
         Update: Partial<Omit<CheckoutProtocol, "id" | "created_at">>;
+        Relationships: [];
+      };
+      contact_submissions: {
+        Row: ContactSubmission;
+        Insert: {
+          name: string;
+          email: string;
+          phone?: string | null;
+          subject?: string | null;
+          message: string;
+        };
+        Update: {
+          name?: string;
+          email?: string;
+          phone?: string | null;
+          subject?: string | null;
+          message?: string;
+        };
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
     Enums: {
       product_category: ProductCategory;
       product_status: ProductStatus;
@@ -194,6 +218,18 @@ export interface CheckoutProtocol {
   signature_data: string | null;  // Base64 encoded signature image
   signed_by: string;              // Name of person who signed
   signed_at: string;
+}
+
+// ─── CONTACT SUBMISSION ──────────────────────────────────
+
+export interface ContactSubmission {
+  id: string;
+  created_at: string;
+  name: string;
+  email: string;
+  phone: string | null;
+  subject: string | null;
+  message: string;
 }
 
 // ─── BRIEFING (generated, not stored – or stored as JSON) ─
