@@ -18,21 +18,26 @@ export default function HomePage() {
     <>
       {/* ─── HERO ─────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-neutral-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-900/30 via-transparent to-transparent" />
-        <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+        {/* Layered gradients — forest depth, not flat black */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-950/80 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_70%_0%,_rgba(22,163,74,0.15),_transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_0%_100%,_rgba(22,163,74,0.06),_transparent)]" />
+        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/20 to-transparent" />
+
+        <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-2xl">
-            <p className="text-brand-400 font-medium text-sm mb-4">
+            <p className="text-brand-400 font-medium text-sm tracking-wide mb-4">
               Mietpark Westerwald · Nistertal
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
               Werkzeuge &amp; Baugeräte{" "}
               <span className="text-brand-400">mieten</span>
             </h1>
-            <p className="mt-5 text-lg text-neutral-300 max-w-lg leading-relaxed">
+            <p className="mt-6 text-lg text-neutral-300 max-w-lg leading-relaxed">
               Rüttelplatten, Minibagger, Holzspalter und mehr – professionell
               gewartet, fair bepreist, direkt verfügbar.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link href="/katalog">
                 <Button size="lg" className="gap-2">
                   Katalog ansehen
