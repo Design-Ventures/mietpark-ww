@@ -1,5 +1,5 @@
 import { CatalogFilters } from "@/components/catalog/catalog-filters";
-import { getProducts } from "@/lib/mock-data";
+import { getProducts } from "@/lib/supabase/products";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     "Alle verfügbaren Werkzeuge, Maschinen und Baugeräte zum Mieten im Mietpark Westerwald. Rüttelplatten, Minibagger, Holzspalter und mehr.",
 };
 
-export default function KatalogPage() {
-  const products = getProducts();
+export default async function KatalogPage() {
+  const products = await getProducts();
 
   return (
     <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-8 sm:py-12">

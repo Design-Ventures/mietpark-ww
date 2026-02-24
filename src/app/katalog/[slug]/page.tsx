@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getProductBySlug, getProducts } from "@/lib/mock-data";
+import { getProductBySlug } from "@/lib/supabase/products";
 import { ProductStatusBadge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -25,7 +25,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) return { title: "Produkt nicht gefunden" };
 
   return {
@@ -38,10 +38,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: "de_DE",
     },
   };
-}
-
-export function generateStaticParams() {
-  return getProducts().map((p) => ({ slug: p.slug }));
 }
 
 // ─── PRICE TIER COMPONENT ─────────────────────────────────
@@ -85,7 +81,7 @@ function PriceTier({
 
 export default async function ProductDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     notFound();
