@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Leistungsstarker Minibagger mit 3,5 Tonnen Einsatzgewicht. Vielseitig einsetzbar für Erdarbeiten, Aushub, Kanalbau und Abbrucharbeiten. Nullheck-Design ermöglicht Arbeiten auf engem Raum. Inklusive Standardlöffel.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/minibagger-3-5t.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "3,5t",
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Mobiler Holzspalter auf Straßenanhänger mit 22 Tonnen Spaltkraft. Kann direkt an den Einsatzort gefahren werden (Führerschein BE erforderlich). Geeignet für Stammholz bis 60 cm Durchmesser.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/holzspalter-anhaenger.jpg"],
     serial_number: null,
     manufacturer: "Posch",
     model: "22t Anhänger",
@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Leistungsstarker Asthäcksler mit Dreipunktanbau für den Traktor. Ideal für Grünschnitt, Baumschnitt und Gartenabfälle. Zerkleinert Äste schnell und effizient zu verwertbarem Häckselgut.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/asthaecksler-dreipunkt.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "Dreipunkt",
@@ -122,7 +122,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Schwere Rüttelplatte mit 600 kg Betriebsgewicht. Geeignet für den Straßen- und Wegebau, Pflasterarbeiten und großflächige Verdichtungsaufgaben. Zuverlässige Verdichtungsleistung für anspruchsvolle Projekte.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/ruettelplatte-weber-whv-6013.jpg"],
     serial_number: null,
     manufacturer: "Weber",
     model: "WHV 6013",
@@ -154,7 +154,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Nassschneidemaschine mit 2,2 kW Leistung für präzise Schnitte in Fliesen, Naturstein und Betonplatten. Wassergekühltes Diamantblatt für staubfreies Arbeiten und saubere Schnittkanten.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/nassschneidemaschine-ssb-ego400.jpg"],
     serial_number: null,
     manufacturer: "SSB",
     model: "EGO400",
@@ -186,7 +186,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Robuste Baukreissäge mit 450 mm Sägeblatt. Ideal für den Zuschnitt von Bauholz, Schalungsbrettern und Dachlatten direkt auf der Baustelle. Stabile Bauweise für den täglichen Einsatz.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/baukreissaege-atika-atu-450.jpg"],
     serial_number: null,
     manufacturer: "Atika",
     model: "ATU 450",
@@ -218,7 +218,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Elektrische Dämmstoffsäge für den sauberen und effizienten Zuschnitt von Dämmmaterialien. Ermöglicht gerade Schnitte in Mineralwolle, Styropor und anderen Dämmstoffen ohne Ausfransen.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/daemmstoffsaege.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -248,7 +248,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Zuverlässiger Betonmischer für die Baustelle. Mischt Beton, Mörtel und Estrich gleichmäßig und effizient. Robust gebaut für den täglichen Einsatz im Hoch- und Tiefbau.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/betonmischer.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -278,7 +278,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Kraftvolles Rührgerät zum Anmischen von Beton, Fliesenkleber, Putzen und diversen anderen Baumaterialien. Spart Zeit und Kraft gegenüber dem Mischen von Hand.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/betonruehrgeraet.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -308,7 +308,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Elektrischer Abbruchhammer von Bosch für Stemm- und Abbrucharbeiten. Durchbricht Beton, Mauerwerk und Fliesen mit hoher Schlagkraft. Ideal für Renovierungen und Rückbau.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/abbruchhammer-bosch.jpg"],
     serial_number: null,
     manufacturer: "Bosch",
     model: null,
@@ -339,7 +339,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Mauernutfräse zum sauberen Fräsen von Schlitzen in Mauerwerk und Beton. Für die Verlegung von Elektroleitungen, Wasserleitungen und Heizungsrohren. Staubarmes Arbeiten mit Absaugvorrichtung.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/mauernutfraese.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -369,7 +369,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Professionelles Trocknungsgerät zur Bautrocknung. Entzieht Feuchtigkeit aus Neubauten, nach Wasserschäden oder bei Renovierungen. Beschleunigt den Trocknungsprozess erheblich.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/bautrockner.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -399,7 +399,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Propan-Schweißgerät für die Verarbeitung von Dachfolien und Bitumenbahnen. Gleichmäßige Flamme für sichere und professionelle Verschweißungen. Propan-Gasflasche gegen Kaution verfügbar.",
     category: "maschine",
-    images: [],
+    images: ["/images/produkte/propan-schweissgeraet-icopal.jpg"],
     serial_number: null,
     manufacturer: "ICOPal",
     model: "455001",
@@ -437,7 +437,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Präziser Rotationslaser für Nivellierarbeiten. Selbstnivellierend mit hoher Reichweite. Ideal für Fundament-, Estrich- und Tiefbauarbeiten. Inklusive Empfänger und Stativ.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/rotationslaser.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -468,7 +468,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Optisches Nivelliergerät für präzise Höhenmessungen auf der Baustelle. Unverzichtbar für Fundamentarbeiten, Pflasterarbeiten und Geländeaufnahmen.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/nivelliergeraet.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -498,7 +498,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Versetzzange für Stufen- und Winkelsteine bis 40 cm Breite. Ermöglicht sicheres und rückenschonendes Versetzen schwerer Betonsteine mit dem Bagger oder Kran.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/versetzzange-40cm.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "40 cm",
@@ -529,7 +529,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Kompakte Versetzzange für kleinere Betonsteine bis 20 cm Breite. Für präzises Versetzen von Pflastersteinen, L-Steinen und ähnlichen Elementen.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/versetzzange-20cm.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "20 cm",
@@ -560,7 +560,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Blockklemmen zum sicheren Greifen und Versetzen von Betonblöcken, Mauersteinen und Bordsteinen. Erleichtert das Handling schwerer Baumaterialien erheblich.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/blockklemmen.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -590,7 +590,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Rinneisenbiegegerät zum präzisen Biegen von Rinneisen und Bewehrungsstahl. Unverzichtbar für Betonarbeiten und Armierungsarbeiten auf der Baustelle.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/rinneisenbiegegeraet.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -620,7 +620,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Set aus Schalungsklemmen für Sturz- und Mauerschalung. Ermöglicht schnelles und sicheres Einschalen von Stürzen, Ringanker und Mauerwerksöffnungen.",
     category: "werkzeug",
-    images: [],
+    images: ["/images/produkte/schalungsklemmen-set.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
@@ -655,7 +655,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Mobiles Rollgerüst mit 5 m Arbeitshöhe. Schnell aufgebaut und flexibel versetzbar. Ideal für Fassadenarbeiten, Malerarbeiten und Installationsarbeiten in der Höhe.",
     category: "zubehoer",
-    images: [],
+    images: ["/images/produkte/rollgeruest-5m.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "5 m",
@@ -686,7 +686,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Stahlrohrgerüst System Plettac, 70 cm Breite. Inklusive Streben, Füße und Zubehör. Preis pro Quadratmeter für 4 Wochen. Ideal für Fassadenarbeiten, Dacharbeiten und größere Renovierungsprojekte.",
     category: "zubehoer",
-    images: [],
+    images: ["/images/produkte/fassadengeruest-plettac.jpg"],
     serial_number: null,
     manufacturer: "Plettac",
     model: "70 cm Breite",
@@ -719,7 +719,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Abschließbarer Materialcontainer mit 4 × 2 m Grundfläche. Sicherer Lagerort für Werkzeuge, Baumaterialien und Geräte auf der Baustelle. Wetterfest und einbruchsicher.",
     category: "zubehoer",
-    images: [],
+    images: ["/images/produkte/materialcontainer-4x2m.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "4 × 2 m",
@@ -750,7 +750,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Bauaufzug mit 8 m Förderhöhe und 400 kg Tragkraft. Transportiert Material sicher und effizient auf höher gelegene Stockwerke. Spart Zeit und körperliche Belastung beim Materialtransport.",
     category: "zubehoer",
-    images: [],
+    images: ["/images/produkte/bauaufzug-8m.jpg"],
     serial_number: null,
     manufacturer: null,
     model: "8 m / 400 kg",
@@ -781,7 +781,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Geprüfter Baustromkasten für die sichere Stromversorgung auf der Baustelle. Mit FI-Schutzschalter und verschiedenen Steckdosen für alle gängigen Baustromverbraucher.",
     category: "zubehoer",
-    images: [],
+    images: ["/images/produkte/baustromkasten.jpg"],
     serial_number: null,
     manufacturer: null,
     model: null,
