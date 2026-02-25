@@ -121,7 +121,7 @@ export function SiteHeader() {
                 </Button>
               </Link>
             )}
-            <Link href="/katalog">
+            <Link href="/">
               <Button size="sm">Gerät mieten</Button>
             </Link>
           </div>
@@ -168,7 +168,7 @@ export function SiteHeader() {
                   <Button variant="outline" fullWidth>Anmelden</Button>
                 </Link>
               )}
-              <Link href="/katalog" onClick={() => setMobileOpen(false)}>
+              <Link href="/" onClick={() => setMobileOpen(false)}>
                 <Button fullWidth>Gerät mieten</Button>
               </Link>
             </div>

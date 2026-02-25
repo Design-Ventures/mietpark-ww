@@ -15,9 +15,10 @@ const categories: { value: ProductCategory | "alle"; label: string }[] = [
 
 interface CatalogFiltersProps {
   products: Product[];
+  prominent?: boolean;
 }
 
-export function CatalogFilters({ products }: CatalogFiltersProps) {
+export function CatalogFilters({ products, prominent }: CatalogFiltersProps) {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<ProductCategory | "alle">("alle");
 
@@ -45,18 +46,20 @@ export function CatalogFilters({ products }: CatalogFiltersProps) {
   return (
     <>
       {/* Filters */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-8">
-        <div className="relative flex-1 max-w-md">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" />
+      <div className={`flex flex-col gap-4 ${prominent ? "items-center mb-10" : "sm:flex-row mb-8"}`}>
+        <div className={`relative ${prominent ? "w-full max-w-xl" : "flex-1 max-w-md"}`}>
+          <Search className={`absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 ${prominent ? "w-5 h-5" : "w-4 h-4"}`} />
           <input
             type="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Gerät suchen..."
-            className="h-10 w-full rounded-lg border border-neutral-300 bg-white pl-9 pr-3 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500"
+            placeholder={prominent ? "Gerät suchen – z.B. Rüttelplatte, Minibagger..." : "Gerät suchen..."}
+            className={`w-full rounded-lg border border-neutral-300 bg-white pr-3 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 ${
+              prominent ? "h-12 pl-10 text-base" : "h-10 pl-9"
+            }`}
           />
         </div>
-        <div className="flex gap-2 flex-wrap">
+        <div className={`flex gap-2 flex-wrap ${prominent ? "justify-center" : ""}`}>
           {categories.map((cat) => (
             <button
               key={cat.value}

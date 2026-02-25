@@ -5,6 +5,7 @@ import { ProductStatusBadge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { formatPrice } from "@/lib/utils";
+import { StickyBookingBar } from "@/components/catalog/sticky-booking-bar";
 import {
   ArrowLeft,
   Package,
@@ -96,7 +97,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   };
 
   return (
-    <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-6 sm:py-10 pb-24 lg:pb-10">
       {/* Breadcrumb */}
       <nav className="mb-6">
         <Link
@@ -192,7 +193,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         </div>
 
         {/* ─── RIGHT: Info & Pricing ─────────────────────── */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-6 lg:sticky lg:top-24 lg:self-start">
           {/* Title section */}
           <div>
             <p className="text-sm font-medium text-brand-600 mb-1">
@@ -252,7 +253,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </Card>
 
           {/* CTA */}
-          <div className="space-y-3">
+          <div id="product-cta" className="space-y-3">
             {isAvailable ? (
               <Link href={`/katalog/${product.slug}/buchen`}>
                 <Button size="lg" fullWidth className="gap-2">
@@ -337,6 +338,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </Card>
         </div>
       </div>
+
+      {isAvailable && (
+        <StickyBookingBar
+          productName={product.name}
+          priceDaily={product.price_daily}
+          bookingHref={`/katalog/${product.slug}/buchen`}
+        />
+      )}
     </div>
   );
 }

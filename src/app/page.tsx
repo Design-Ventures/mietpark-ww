@@ -1,61 +1,41 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CatalogFilters } from "@/components/catalog/catalog-filters";
+import { getProducts } from "@/lib/supabase/products";
 import {
   Search,
   CalendarCheck,
   CreditCard,
   Truck,
-  ClipboardCheck,
-  ArrowRight,
   Phone,
   MapPin,
   Clock,
 } from "lucide-react";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts();
+
   return (
     <>
-      {/* ─── HERO ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-neutral-950 text-white">
-        {/* Layered gradients — forest depth, not flat black */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-950/80 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_70%_0%,_rgba(22,163,74,0.15),_transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_0%_100%,_rgba(22,163,74,0.06),_transparent)]" />
-        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/20 to-transparent" />
-
-        <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-          <div className="max-w-2xl">
-            <p className="text-brand-400 font-medium text-sm tracking-wide mb-4">
-              Mietpark Westerwald · Nistertal
-            </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-              Werkzeuge &amp; Baugeräte{" "}
-              <span className="text-brand-400">mieten</span>
+      {/* ─── SEARCH-FIRST CATALOG ────────────────────── */}
+      <section className="py-10 sm:py-14">
+        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl sm:text-4xl font-bold text-neutral-900 tracking-tight">
+              Werkzeuge &amp; Baugeräte mieten
             </h1>
-            <p className="mt-6 text-lg text-neutral-300 max-w-lg leading-relaxed">
-              Rüttelplatten, Minibagger, Holzspalter und mehr – professionell
-              gewartet, fair bepreist, direkt verfügbar.
+            <p className="mt-2 text-neutral-500">
+              {products.length} Geräte verfügbar · Mietpark Westerwald, Nistertal
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <Link href="/katalog">
-                <Button size="lg" className="gap-2">
-                  Katalog ansehen
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link href="/#ablauf">
-                <Button variant="outline" size="lg" className="border-neutral-700 text-white hover:bg-neutral-800">
-                  So funktioniert&apos;s
-                </Button>
-              </Link>
-            </div>
           </div>
+
+          <CatalogFilters products={products} prominent />
         </div>
       </section>
 
       {/* ─── HOW IT WORKS ─────────────────────────────── */}
-      <section id="ablauf" className="py-16 sm:py-24">
+      <section id="ablauf" className="py-16 sm:py-24 bg-neutral-50">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900">
@@ -150,28 +130,6 @@ export default function HomePage() {
                 </p>
               </div>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── CTA ──────────────────────────────────────── */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 text-center">
-          <ClipboardCheck className="w-10 h-10 text-brand-600 mx-auto mb-4" />
-          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900">
-            Bereit für Ihr Projekt?
-          </h2>
-          <p className="mt-3 text-neutral-500 max-w-md mx-auto">
-            Durchsuchen Sie unseren Katalog und buchen Sie direkt online –
-            ohne Wartezeit, ohne Telefon-Ping-Pong.
-          </p>
-          <div className="mt-6">
-            <Link href="/katalog">
-              <Button size="lg" className="gap-2">
-                Zum Katalog
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
